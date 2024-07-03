@@ -1,6 +1,6 @@
 package cibertec.edu.pe.DSWII_T3_AlexandraVilchez.controller;
 
-pimport io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -11,9 +11,9 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-import pe.edu.cibertect.api_rest_ventas.model.bd.Usuario;
-import pe.edu.cibertect.api_rest_ventas.model.dto.UsuarioSeguridadDto;
-import pe.edu.cibertect.api_rest_ventas.service.DetalleUsuarioService;
+import cibertec.edu.pe.DSWII_T3_AlexandraVilchez.model.bd.Usuario;
+import cibertec.edu.pe.DSWII_T3_AlexandraVilchez.model.dto.UsuarioSeguridadDto;
+import cibertec.edu.pe.DSWII_T3_AlexandraVilchez.service.DetalleUsuarioService;
 
 import java.util.Date;
 import java.util.List;
@@ -72,5 +72,4 @@ public class AuthController {
                 .compact();
         return token;
     }
-
 }

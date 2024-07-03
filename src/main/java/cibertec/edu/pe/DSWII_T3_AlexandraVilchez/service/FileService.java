@@ -14,7 +14,7 @@ import java.util.List;
 @Service
 public class FileService implements IFileService {
 
-    private final Path rootFolder = Paths.get("archivos");
+    private final Path pathFolder= Paths.get("documentos");
     private static final List<String> ALLOWED_EXTENSIONS = Arrays.asList("doc", "docx");
 
     @Override

@@ -7,6 +7,7 @@ import cibertec.edu.pe.DSWII_T3_AlexandraVilchez.util.DtoUtil;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +18,7 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 @RestController
 @RequestMapping("/pubs-dto")
-//@PreAuthorize("hasRole('Supervisor')")
+@PreAuthorize("hasRole('Supervisor')")
 public class NotasController {
 
     private final INotasService iNotasService;
